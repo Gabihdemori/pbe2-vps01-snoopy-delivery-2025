@@ -23,11 +23,6 @@ Desenvolver as funcionalidades conforme requisitos
     - [CT004.1] Pelo menos um motorista deve ter dois ou mais pedidos cadastrados.
 - [CT005] Cadastre, altere e exclua um pedido.
 
-
-Pedidos.png
-Motoristas.png)
-
-
 ## Tecnologias
 - Node.js
 - Prisma
