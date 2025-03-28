@@ -24,8 +24,8 @@ Desenvolver as funcionalidades conforme requisitos
 - [CT005] Cadastre, altere e exclua um pedido.
 
 
-(./docs/Pedidos.png),
-(./docs/Motoristas.png)
+Pedidos.png
+Motoristas.png)
 
 
 ## Tecnologias
