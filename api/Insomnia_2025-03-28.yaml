@@ -1,0 +1,284 @@
+type: collection.insomnia.rest/5.0
+name: SNOOPY PetShop Delivery
+meta:
+  id: wrk_2087af83eaa7450e8c2a4808308978a5
+  created: 1743181431207
+  modified: 1743181431207
+collection:
+  - name: Motorista
+    meta:
+      id: fld_ef42d8c2a4c1437babe161e1d441cfd2
+      created: 1743181446601
+      modified: 1743181446601
+      sortKey: -1743181446601
+    children:
+      - url: http://localhost:3001/motorista
+        name: DELETE
+        meta:
+          id: req_fc56ce0c734644728cae0db0367c57f8
+          created: 1743182673409
+          modified: 1743187114810
+          isPrivate: false
+          sortKey: -1743182673409
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/motorista/1
+        name: UPDATE
+        meta:
+          id: req_26e5e23c0ad545b1ac78a0ca02c5edc2
+          created: 1743182675942
+          modified: 1743187651363
+          isPrivate: false
+          sortKey: -1743182675942
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "email": "joa@gmail.com",
+            	"nome": "João Silva",
+            	"telefones": "123456789"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/motorista
+        name: CREATE
+        meta:
+          id: req_2253ff7151f34db2b4eb52f7aadfe9a5
+          created: 1743182678269
+          modified: 1743183247391
+          isPrivate: false
+          sortKey: -1743182678269
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "email": "fe.fa@gmail.com",
+              "nome": "Felipe Falacio",
+              "telefones": ""
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/motorista/1
+        name: READONE
+        meta:
+          id: req_71d3d4f712e240cb839d63243a139199
+          created: 1743182680407
+          modified: 1743184276011
+          isPrivate: false
+          sortKey: -1743182681658.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/motorista/
+        name: READ
+        meta:
+          id: req_3f15dd2136434f41b224b6df2764ac7e
+          created: 1743182682910
+          modified: 1743186687757
+          isPrivate: false
+          sortKey: -1743182681758.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Pedidos
+    meta:
+      id: fld_03e72e342c56488aa8cbed323265833c
+      created: 1743181457531
+      modified: 1743181457531
+      sortKey: -1743181457531
+    children:
+      - url: http://localhost:3001/pedidos
+        name: DELETE
+        meta:
+          id: req_637c3fd09594487f8281d795e85b5351
+          created: 1743181489438
+          modified: 1743187067497
+          isPrivate: false
+          sortKey: -1743181489438
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/pedidos/6
+        name: UPDATE
+        meta:
+          id: req_934165c894144cd59c827ae92b94a424
+          created: 1743181496264
+          modified: 1743185763268
+          isPrivate: false
+          sortKey: -1743181496264
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "motoristaId": 6,
+              "data": "2025-04-09T16:45:00Z",
+              "produto": "Ração para peixes",
+              "valor": 35.00,
+              "endereco": "Rua das Hortênsias, 404",
+              "numero": "208",
+              "cep": "55667-889",
+              "complemento": "Apto 102"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/pedidos
+        name: CREATE
+        meta:
+          id: req_47502f3aa8914a38a733115b9cb8f58a
+          created: 1743181506574
+          modified: 1743183839741
+          isPrivate: false
+          sortKey: -1743181496364
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "motoristaId": 6,
+              "data": "2025-04-09T16:45:00Z",
+              "produto": "Ração para peixes",
+              "valor": 35.00,
+              "endereco": "Rua das Hortênsias, 404",
+              "numero": "404",
+              "cep": "55667-889",
+              "complemento": "Apto 102"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/pedidos/6
+        name: READONE
+        meta:
+          id: req_6975de21e946421ead4511e466598c92
+          created: 1743181511389
+          modified: 1743183849531
+          isPrivate: false
+          sortKey: -1743181496464
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/pedidos
+        name: READ
+        meta:
+          id: req_c0121460513e43f89c874a2d57e2726a
+          created: 1743181517351
+          modified: 1743182782738
+          isPrivate: false
+          sortKey: -1743181517351
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_8b54d208a7391fd6e6c6e77352dbc562837b95f2
+    created: 1743181431219
+    modified: 1743181431219
+environments:
+  name: Base Environment
+  meta:
+    id: env_8b54d208a7391fd6e6c6e77352dbc562837b95f2
+    created: 1743181431214
+    modified: 1743181431214
+    isPrivate: false
