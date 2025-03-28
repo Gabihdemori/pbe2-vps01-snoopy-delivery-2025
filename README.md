@@ -23,6 +23,69 @@ Desenvolver as funcionalidades conforme requisitos
     - [CT004.1] Pelo menos um motorista deve ter dois ou mais pedidos cadastrados.
 - [CT005] Cadastre, altere e exclua um pedido.
 
+
+(./docs/Pedidos.png),
+(./docs/Motoristas.png)
+
+
 ## Tecnologias
+- Node.js
+- Prisma
+- XAMPP
+- MySQL
+- VSCode
+- Insomnia
 
 ## Passo a Passo de como executar a API
+
+### 1. Instale as dependências
+Clone o repositório:
+```sh
+git clone https://github.com/Gabihdemori/pbe2-vps01-snoopy-delivery-2025.git
+```
+
+### 2. Abra o XAMPP Control Panel e inicie o MySQL
+
+### 3. Abra o repositório com VSCode
+
+### 4. Crie o arquivo `.env` na pasta API e adicione a variável de ambiente:
+```sh
+DATABASE_URL="mysql://root@localhost:3306/snoop?schema=public&timezone=UTC"
+```
+
+### 5. Abra o terminal, navegue até a pasta API e execute os comandos
+#### Instale as dependências do projeto:
+```sh
+npm install
+```
+
+#### Gere o cliente Prisma:
+```sh
+npx prisma generate
+# ou
+prisma generate
+```
+
+#### Execute as migrações para criar as tabelas no banco de dados:
+```sh
+npx prisma migrate dev --name init
+# ou
+prisma migrate dev --name init
+```
+
+### 6. Inicie o servidor
+Para iniciar o servidor da API, use o comando:
+```sh
+npm start
+```
+O servidor estará rodando em [http://localhost:3001](http://localhost:3001)
+
+### 7. Teste os endpoints
+Abra o Insomnia ou qualquer outra ferramenta de teste de API e crie uma nova requisição para testar os seguintes endpoints:
+
+- **POST /tasks**: Criar uma nova tarefa.
+- **GET /tasks**: Listar todas as tarefas.
+- **DELETE /tasks/{id}**: Deletar uma tarefa.
+
+### 8. Parar o servidor
+Para parar o servidor, pressione `Ctrl + C` no terminal.
